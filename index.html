@@ -308,7 +308,7 @@
 
                    <div class="form-group">
                    	<label><strong>Email</strong></label>
-                   	<input id="email" type="email" class="form-control" placeholder="Email" required="required" name="Email">
+                   	<input id="email" type="email" class="form-control" placeholder="Email" required="required" name="_repyto" name="Email">
                    </div>
                    <div class="form-group">
                    	<label><strong>Subject</strong></label>
@@ -318,10 +318,12 @@
                    	<label><strong>Message</strong></label>
                    	<textarea id="message"  class="form-control" rows="7" placeholder="Message" required="required" name="Message"></textarea>
                    </div>
-
                    <div class="form-group">
                    	<button class="fa fa-paper-plane btn btn-primary btn-block" value="Send">&nbsp;Send Message</button>
                    </div>
+                   <input type="hidden" name="_subject" value="Cool" />
+                   <input type="hidden" name="_next" value="https://kartikhans.github.io" />
+
                    </form>
                  </div>
 
