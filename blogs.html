@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="logo.png">
+<title>Blog - Kartik Hans</title>
+
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background: #fff;
+  margin: 0;
+  padding: 20px;
+}
+
+.content {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+/* Navigation */
+nav {
+  margin-bottom: 40px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #eee;
+}
+
+nav a {
+  color: #1a73e8;
+  text-decoration: none;
+  margin-right: 20px;
+  font-size: 0.95em;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+nav a.active {
+  color: #333;
+  font-weight: 600;
+}
+
+/* Page Header */
+h1 {
+  color: #2e7d32;
+  margin: 0 0 8px 0;
+  font-size: 2em;
+  font-weight: 600;
+}
+
+.page-description {
+  color: #666;
+  margin-bottom: 40px;
+}
+
+/* Blog Post Card */
+.blog-post {
+  margin-bottom: 40px;
+  padding-bottom: 40px;
+  border-bottom: 1px solid #eee;
+}
+
+.blog-post:last-child {
+  border-bottom: none;
+}
+
+.blog-post h2 {
+  margin: 0 0 8px 0;
+  font-size: 1.4em;
+}
+
+.blog-post h2 a {
+  color: #1a237e;
+  text-decoration: none;
+}
+
+.blog-post h2 a:hover {
+  color: #1a73e8;
+}
+
+.blog-meta {
+  color: #888;
+  font-size: 0.9em;
+  margin-bottom: 12px;
+}
+
+.blog-tags {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 12px;
+}
+
+.tag {
+  background: #e8f5e9;
+  color: #2e7d32;
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 0.8em;
+}
+
+.blog-excerpt {
+  color: #555;
+  margin: 0;
+}
+
+.read-more {
+  display: inline-block;
+  margin-top: 12px;
+  color: #1a73e8;
+  text-decoration: none;
+  font-size: 0.95em;
+}
+
+.read-more:hover {
+  text-decoration: underline;
+}
+
+/* Empty State */
+.coming-soon {
+  text-align: center;
+  padding: 60px 20px;
+  color: #888;
+}
+
+.coming-soon h2 {
+  color: #666;
+  font-weight: 500;
+}
+
+/* Responsive */
+@media (max-width: 680px) {
+  h1 {
+    font-size: 1.6em;
+  }
+
+  .blog-post h2 {
+    font-size: 1.2em;
+  }
+}
+</style>
+</head>
+
+<body>
+<div class="content">
+
+<nav>
+  <a href="index.html">Home</a>
+  <a href="blogs.html" class="active">Blog</a>
+  <a href="travels.html">Travel Photography</a>
+</nav>
+
+<h1>Blog</h1>
+<p class="page-description">Thoughts on distributed systems, LLMs, and software engineering.</p>
+
+<!-- ============================================
+     HOW TO ADD A NEW BLOG POST:
+
+     1. Copy the template below (between START and END)
+     2. Paste it after this comment block
+     3. Update the title, date, tags, excerpt, and link
+     4. For the full blog post, create a new HTML file in /blog/ folder
+     ============================================ -->
+
+<!-- === START BLOG POST TEMPLATE (copy this) ===
+
+<article class="blog-post">
+  <h2><a href="blog/your-post-url.html">Your Blog Post Title</a></h2>
+  <div class="blog-meta">March 22, 2026</div>
+  <div class="blog-tags">
+    <span class="tag">LLM</span>
+    <span class="tag">Systems</span>
+  </div>
+  <p class="blog-excerpt">
+    A brief 2-3 sentence excerpt of your blog post that gives readers
+    an idea of what the post is about...
+  </p>
+  <a href="blog/your-post-url.html" class="read-more">Read more →</a>
+</article>
+
+=== END BLOG POST TEMPLATE === -->
+
+
+<!-- EXAMPLE POST (uncomment when you have content)
+
+<article class="blog-post">
+  <h2><a href="blog/llm-inference-optimization.html">Optimizing LLM Inference at Scale</a></h2>
+  <div class="blog-meta">March 15, 2026</div>
+  <div class="blog-tags">
+    <span class="tag">LLM</span>
+    <span class="tag">Performance</span>
+    <span class="tag">Infrastructure</span>
+  </div>
+  <p class="blog-excerpt">
+    Exploring various techniques for optimizing large language model inference,
+    from batching strategies to KV-cache optimization and quantization approaches.
+  </p>
+  <a href="blog/llm-inference-optimization.html" class="read-more">Read more →</a>
+</article>
+
+-->
+
+
+<!-- Coming Soon Message (remove this section when you add posts) -->
+<div class="coming-soon">
+  <h2>Coming Soon</h2>
+  <p>Blog posts will be added here soon. Stay tuned!</p>
+</div>
+
+
+</div>
+</body>
+</html>

@@ -1,145 +1,357 @@
-<html><head>
-<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="icon" href="logo.png">
 <title>Kartik Hans</title>
 
 <style>
-  .image-container {
-  background-image: url("img1.png");
-  /* Adjust width and height as needed */
-  width: 370px;
-  height: 310px;
-  background-size: cover; /* Fills the container, maintaining aspect ratio */
+* {
+  box-sizing: border-box;
 }
 
-  .no-copy {
-    user-select: none;
-  }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background: #fff;
+  margin: 0;
+  padding: 20px;
+}
+
 .content {
-  max-width: 1600px;
-  margin: auto;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px 0;
 }
-table {
-  font-family: arial, sans-serif;
+
+/* Navigation */
+nav {
+  margin-bottom: 40px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #eee;
+}
+
+nav a {
+  color: #1a73e8;
+  text-decoration: none;
+  margin-right: 20px;
+  font-size: 0.95em;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+nav a.active {
+  color: #333;
+  font-weight: 600;
+}
+
+/* Header Section */
+.header {
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+  margin-bottom: 40px;
+}
+
+.profile-image {
+  width: 280px;
+  height: 240px;
+  background-image: url("img1.png");
+  background-size: cover;
+  background-position: center;
+  border-radius: 4px;
+  flex-shrink: 0;
+}
+
+.header-info {
+  flex: 1;
+}
+
+h1 {
+  color: #2e7d32;
+  margin: 0 0 8px 0;
+  font-size: 2.2em;
+  font-weight: 600;
+}
+
+.title {
+  font-size: 1.1em;
+  color: #555;
+  margin-bottom: 12px;
+}
+
+.email {
+  font-family: "SF Mono", Monaco, "Courier New", monospace;
+  color: #666;
+  font-size: 0.95em;
+  margin-bottom: 16px;
+}
+
+.social-links {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.social-links a {
+  color: #1a73e8;
+  text-decoration: none;
+  font-size: 0.95em;
+  padding: 4px 0;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s;
+}
+
+.social-links a:hover {
+  border-bottom-color: #1a73e8;
+}
+
+/* Section Styles */
+h2 {
+  color: #1a237e;
+  font-size: 1.3em;
+  font-weight: 600;
+  margin: 32px 0 16px 0;
+  padding-bottom: 6px;
+  border-bottom: 2px solid #e8eaf6;
+}
+
+ul {
+  margin: 0;
+  padding-left: 20px;
+}
+
+li {
+  margin-bottom: 8px;
+  color: #444;
+}
+
+a {
+  color: #1a73e8;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Research Interests */
+.interests {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.interest-tag {
+  background: #e8f5e9;
+  color: #2e7d32;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 0.9em;
+  font-weight: 500;
+}
+
+/* Teaching Table */
+.teaching-table {
+  width: 100%;
   border-collapse: collapse;
+  margin-top: 8px;
 }
-td, th {
-  text-align: left;
-  padding: 8px;
+
+.teaching-table td {
+  padding: 8px 16px 8px 0;
+  color: #444;
+}
+
+.teaching-table td:first-child {
+  font-weight: 600;
+  color: #333;
+}
+
+/* Publications */
+.publication {
+  margin: 16px 0;
+}
+
+.publication h3 {
+  font-size: 1em;
+  font-weight: 600;
+  margin: 0 0 8px 0;
+}
+
+.publication h3 a {
+  color: #1a73e8;
+}
+
+details {
+  margin-top: 8px;
+}
+
+summary {
+  cursor: pointer;
+  color: #666;
+  font-size: 0.9em;
+}
+
+summary:hover {
+  color: #333;
+}
+
+pre {
+  background: #f5f5f5;
+  padding: 16px;
+  border-radius: 4px;
+  overflow-x: auto;
+  font-size: 0.85em;
+  line-height: 1.5;
+}
+
+/* Contact Section */
+.contact-text {
+  color: #555;
+  margin-bottom: 8px;
+}
+
+/* Other Interests */
+.other-interests {
+  color: #555;
+}
+
+.f1 {
+  color: #d32f2f;
+  font-weight: 600;
+}
+
+/* Footer */
+.carbon-badge {
+  margin-top: 48px;
+  padding-top: 24px;
+  border-top: 1px solid #eee;
+}
+
+/* Responsive */
+@media (max-width: 680px) {
+  .header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .profile-image {
+    width: 200px;
+    height: 170px;
+  }
+
+  .social-links {
+    justify-content: center;
+  }
+
+  h1 {
+    font-size: 1.8em;
+  }
 }
 </style>
 </head>
 
 <body>
 <div class="content">
-<br>
-<table>
-<tbody><tr>
 
-<td>
+<nav>
+  <a href="index.html" class="active">Home</a>
+  <a href="blogs.html">Blog</a>
+  <a href="travels.html">Travel Photography</a>
+</nav>
 
- <div class="image-container">
+<div class="header">
+  <div class="profile-image"></div>
+  <div class="header-info">
+    <h1>Kartik Hans</h1>
+    <div class="title">
+      Software Engineer at Morph Systems<br>
+      Part-time LLM Systems Researcher
+    </div>
+    <div class="email">hans[at]sci[dot]pitt[dot]edu</div>
+    <div class="social-links">
+      <a href="https://www.linkedin.com/in/kartikhans/" target="_blank">LinkedIn</a>
+      <a href="https://scholar.google.com/citations?user=-0iSWnQAAAAJ" target="_blank">Google Scholar</a>
+      <a href="https://github.com/kartikhans" target="_blank">GitHub</a>
+      <a href="https://www.instagram.com/kartikhans/" target="_blank">Instagram</a>
+    </div>
   </div>
-
-</td>
-<td> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
-<td> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
-<td>
-<br>
-<h1>
-
-<font color="#008000" class="no-copy">Kartik Hans</font>
-</h1>
-
-<h3>
-Distributed Systems Researcher<br>
-University of Pittsburgh<br>
-E-mail:<font face="monospace" class="no-copy"> hans[at]sci[dot]pitt[dot]edu </font><br>
-<h4> <a href="https://www.linkedin.com/in/kartikhans/" target="_blank">[LinkedIn]</a> | <a href="https://scholar.google.com/citations?user=-0iSWnQAAAAJ" target="_blank">[Google Scholar]</a> | <a href="https://github.com/kartikhans" target="_blank">[Github]</a> | <a href="https://www.instagram.com/kartikhans/" target="_blank">[Instagram]</a></h4>
-</h3>
-
-</td>
-</tr>
-</tbody></table>
-
-<br>
-
-<br><h2><font color="#111155">Past Affiliations</font></h2>
-
-<ul>
-</li><li>Jan 2024 - Dec 2025: MS in CS at <a href="https://www.sci.pitt.edu/">School of Computing and Information</a>, University of Pittsburgh, Pittsburgh USA.
-</li><li>Jan 2024 - Dec 2025: PhD Dropout at <a href="https://www.sci.pitt.edu/">School of Computing and Information</a>, University of Pittsburgh</a>, Pittsburgh USA.
-</li><li>Aug 2022 - Dec 2023: Data Integration Engineer at <a href="https://c3.ai/">C3 AI</a>, Bengaluru IN.
-</li><li>Nov 2021 - Aug 2022: Data Engineer at <a href="https://www.goldcast.io/">Goldcast</a>, Bengaluru IN.
-</li><li>Dec 2020 - Nov 2021: Machine Learning Engineer at <a href="https://www.brightmoney.co/">Bright Money</a>, Bengaluru IN.
-</li><li>Dec 2018 - Jan 2019: Research Intern at <a href="https://www.jhu.edu/">Johns Hopkins University</a>, Baltimore USA.
-</li><li>Jul 2016 - May 2020: UnderGrad student at the Department of <a href="https://ee.iitd.ac.in/">Electrical Engineering</a>, <a href="https://home.iitd.ac.in/">IITD</a>
-</li></ul>
-
-<br><h2><font color="#111155">Research Interests</font></h2>
-
-
-Distributed Systems
-<br>
-High-Performance Parallel Computing
-<br>
-Data Management
-<br>
-Computer Networks
-
-<br><h2><font color="#111155">Teaching</font></h2>
-<table>
-  <tr>
-    <td>CS1550 </td>
-    <td>Intro. to Operating System(OS)</td>
-    <td><a href="cs1550.html"> Fall 2024</a></td>
-  </tr>
-
-</table>
-
-<br><h2><font color="#111155">Publications</font></h2>
-(in reverse chronological order)
-
-<article>
-        <h3><a href="https://www.usenix.org/conference/nsdi20/presentation/yousefi">Liveness Verification of Stateful Network Functions</a></h3>
-
-        <details>
-            <summary>BibTeX Citation</summary>
-            <pre>
-@inproceedings {246364,
-author = {Farnaz Yousefi and Anubhavnidhi Abhashkumar and Kausik Subramanian and Kartik Hans and Soudeh Ghorbani and Aditya Akella},
-title = {Liveness Verification of Stateful Network Functions },
-booktitle = {17th USENIX Symposium on Networked Systems Design and Implementation (NSDI 20)},
-year = {2020},
-isbn = {978-1-939133-13-7},
-address = {Santa Clara, CA},
-pages = {257--272},
-url = {https://www.usenix.org/conference/nsdi20/presentation/yousefi},
-publisher = {USENIX Association},
-month = feb
-}
-            </pre>
-        </details>
-    </article>
-
-
-
-<br><h2><font color="#111155">Project / Internship / Job Requests</font></h2>
-<b> Feel free to reach out to me on Linkedin</b>
-
-
-<br><h2><font color="#111155">Services</font></h2>
-<b>Want a direct conversation? Schedule time with me below.</b><br>
-<a href="https://topmate.io/trippdiv" target="_blank">[TopMate]</a>
-
-<br><h2><font color="#111155">Other Interests</font></h2>
-Running, <font color=#ff2800>F1</font>, Ping Pong, Pickleball, Chess, <a href="travels.html">Travel Photography</a>
-
-
-<!-- carbon footprint calculator -->
-<div id="wcb" class="carbonbadge"></div>
-<script src="https://unpkg.com/website-carbon-badges@1.1.3/b.min.js" defer></script>
-
 </div>
 
-</body></html>
+<h2>Current Position</h2>
+<ul>
+  <li>Jan 2026 - Present: Software Engineer at Morph Systems.</li>
+</ul>
+
+<h2>Past Affiliations</h2>
+<ul>
+  <li>Jan 2024 - Dec 2025: MS in CS at <a href="https://www.sci.pitt.edu/">School of Computing and Information</a>, University of Pittsburgh, Pittsburgh USA.</li>
+  <li>Jan 2024 - Dec 2025: PhD Dropout at <a href="https://www.sci.pitt.edu/">School of Computing and Information</a>, University of Pittsburgh, Pittsburgh USA.</li>
+  <li>Aug 2022 - Dec 2023: Data Integration Engineer at <a href="https://c3.ai/">C3 AI</a>, Bengaluru IN.</li>
+  <li>Nov 2021 - Aug 2022: Data Engineer at <a href="https://www.goldcast.io/">Goldcast</a>, Bengaluru IN.</li>
+  <li>Dec 2020 - Nov 2021: Machine Learning Engineer at <a href="https://www.brightmoney.co/">Bright Money</a>, Bengaluru IN.</li>
+  <li>Dec 2018 - Jan 2019: Research Intern at <a href="https://www.jhu.edu/">Johns Hopkins University</a>, Baltimore USA.</li>
+  <li>Jul 2016 - May 2020: B.Tech at Department of <a href="https://ee.iitd.ac.in/">Electrical Engineering</a>, <a href="https://home.iitd.ac.in/">IIT Delhi</a>.</li>
+</ul>
+
+<h2>Research Interests</h2>
+<div class="interests">
+  <span class="interest-tag">LLM Systems</span>
+  <span class="interest-tag">Data Management</span>
+  <span class="interest-tag">Parallel Computing</span>
+  <span class="interest-tag">Distributed Systems</span>
+  <span class="interest-tag">ML Infrastructure</span>
+</div>
+
+<h2>Teaching</h2>
+<table class="teaching-table">
+  <tr>
+    <td>CS1550</td>
+    <td>Introduction to Operating Systems</td>
+    <td>Fall 2024</td>
+  </tr>
+</table>
+
+<h2>Publications</h2>
+<p style="color: #666; margin: 0 0 16px 0; font-size: 0.9em;">(in reverse chronological order)</p>
+
+<div class="publication">
+  <h3><a href="https://www.usenix.org/conference/nsdi20/presentation/yousefi">Liveness Verification of Stateful Network Functions</a></h3>
+  <details>
+    <summary>BibTeX Citation</summary>
+    <pre>@inproceedings{246364,
+  author = {Farnaz Yousefi and Anubhavnidhi Abhashkumar and Kausik Subramanian and Kartik Hans and Soudeh Ghorbani and Aditya Akella},
+  title = {Liveness Verification of Stateful Network Functions},
+  booktitle = {17th USENIX Symposium on Networked Systems Design and Implementation (NSDI 20)},
+  year = {2020},
+  isbn = {978-1-939133-13-7},
+  address = {Santa Clara, CA},
+  pages = {257--272},
+  url = {https://www.usenix.org/conference/nsdi20/presentation/yousefi},
+  publisher = {USENIX Association},
+  month = feb
+}</pre>
+  </details>
+</div>
+
+<h2>Contact</h2>
+<p class="contact-text">Feel free to reach out to me on <a href="https://www.linkedin.com/in/kartikhans/" target="_blank">LinkedIn</a> for project, internship, or job inquiries.</p>
+<p class="contact-text">Want a direct conversation? <a href="https://topmate.io/trippdiv" target="_blank">Schedule time with me on TopMate</a></p>
+
+<h2>Other Interests</h2>
+<p class="other-interests">Running, <span class="f1">F1</span>, Ping Pong, Pickleball, Chess, <a href="travels.html">Travel Photography</a></p>
+
+<div class="carbon-badge">
+  <div id="wcb" class="carbonbadge"></div>
+  <script src="https://unpkg.com/website-carbon-badges@1.1.3/b.min.js" defer></script>
+</div>
+
+</div>
+</body>
+</html>
