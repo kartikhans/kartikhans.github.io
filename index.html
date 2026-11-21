@@ -4,10 +4,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="icon" href="logo.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet">
-<title>Kartik Hans</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Source+Serif+4:opsz,wght@8..60,500;8..60,600&display=swap" rel="stylesheet">
+<title>Kartik Hans | Software Engineer &amp; Researcher</title>
+<meta name="description" content="Kartik Hans is a software engineer at Tensormesh working on LLM inference, with research in energy-efficient computing and distributed systems.">
 
 <style>
 * {
@@ -15,232 +14,157 @@
 }
 
 body {
-  font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
-  line-height: 1.6;
-  color: #333;
-  background: #fff;
   margin: 0;
-  padding: 20px;
-}
-
-.content {
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 20px 0;
-}
-
-/* Navigation */
-nav {
-  margin-bottom: 40px;
-  padding-bottom: 20px;
-  border-bottom: 1px solid #eee;
-}
-
-nav a {
-  color: #1a73e8;
-  text-decoration: none;
-  margin-right: 20px;
-  font-size: 0.95em;
-}
-
-nav a:hover {
-  text-decoration: underline;
-}
-
-nav a.active {
-  color: #333;
-  font-weight: 600;
-}
-
-/* Header Section */
-.header {
-  display: flex;
-  gap: 40px;
-  align-items: flex-start;
-  margin-bottom: 40px;
-}
-
-.profile-image {
-  width: 340px;
-  height: 290px;
-  background-image: url("img1.png");
-  background-size: cover;
-  background-position: center;
-  border-radius: 4px;
-  flex-shrink: 0;
-}
-
-.header-info {
-  flex: 1;
-}
-
-h1 {
-  font-family: "Source Serif 4", Georgia, serif;
-  color: #2e7d32;
-  margin: 0 0 8px 0;
-  font-size: 2.4em;
-  font-weight: 600;
-}
-
-.title {
-  font-size: 1.1em;
-  color: #555;
-  margin-bottom: 12px;
-}
-
-.email {
-  font-family: "SF Mono", "Roboto Mono", Monaco, monospace;
-  color: #555;
-  font-size: 0.9em;
-  margin-bottom: 16px;
-  letter-spacing: 0.02em;
-}
-
-.social-links {
-  display: flex;
-  gap: 12px;
-  flex-wrap: wrap;
-}
-
-.social-links a {
-  color: #1a73e8;
-  text-decoration: none;
-  font-size: 0.95em;
-  padding: 4px 0;
-  border-bottom: 1px solid transparent;
-  transition: border-color 0.2s;
-}
-
-.social-links a:hover {
-  border-bottom-color: #1a73e8;
-}
-
-/* Section Styles */
-h2 {
-  font-family: "Source Serif 4", Georgia, serif;
-  color: #1a237e;
-  font-size: 1.35em;
-  font-weight: 600;
-  margin: 32px 0 16px 0;
-  padding-bottom: 6px;
-  border-bottom: 2px solid #e8eaf6;
-}
-
-ul {
-  margin: 0;
-  padding-left: 20px;
-}
-
-li {
-  margin-bottom: 8px;
-  color: #444;
+  background: white;
+  color: #272727;
+  font: 1.0625rem/1.55 Georgia, "Times New Roman", serif;
 }
 
 a {
-  color: #1a73e8;
-  text-decoration: none;
+  color: #174681;
+  text-underline-offset: 0.15em;
 }
 
 a:hover {
-  text-decoration: underline;
+  color: #102d54;
 }
 
-/* Research Interests */
-.interests {
+:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 3px;
+}
+
+.content {
+  width: min(56rem, calc(100% - 3rem));
+  margin-inline: auto;
+}
+
+.site-nav,
+.social-links {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 0.25rem 1.15rem;
 }
 
-.interest-tag {
-  background: #e8f5e9;
-  color: #2e7d32;
-  padding: 6px 14px;
-  border-radius: 20px;
-  font-size: 0.9em;
-  font-weight: 500;
+.site-nav {
+  padding-block: 1rem;
+  border-bottom: 1px solid #b8b8b8;
 }
 
-/* Publications */
-.publication {
-  margin: 16px 0;
+.hero {
+  display: grid;
+  grid-template-columns: minmax(0, 25rem) minmax(0, 1fr);
+  grid-template-areas: "portrait intro";
+  gap: 1.5rem 2rem;
+  align-items: center;
+  margin-block: 2rem 2.5rem;
+}
+
+.hero-intro {
+  grid-area: intro;
+}
+
+h1 {
+  margin: 0 0 0.75rem;
+  font-size: clamp(2rem, 4.5vw, 2.9rem);
+  line-height: 1.1;
+}
+
+.bio {
+  margin: 0 0 0.75rem;
+}
+
+.email {
+  margin: 0 0 0.75rem;
+  color: #505050;
+  overflow-wrap: anywhere;
+}
+
+.profile-image {
+  grid-area: portrait;
+  display: block;
+  width: 100%;
+  max-width: 25rem;
+  height: auto;
+}
+
+main > section {
+  margin-block: 2rem;
+}
+
+h2 {
+  margin: 0 0 0.9rem;
+  padding-bottom: 0.25rem;
+  border-bottom: 1px solid #b8b8b8;
+  font-size: 1.5rem;
+  line-height: 1.25;
+}
+
+.publication + .publication {
+  margin-top: 1rem;
 }
 
 .publication h3 {
-  font-size: 1em;
-  font-weight: 600;
-  margin: 0 0 8px 0;
+  margin: 0;
+  font-size: 1.0625rem;
+  line-height: 1.45;
 }
 
-.publication h3 a {
-  color: #1a73e8;
-}
-
-details {
-  margin-top: 8px;
+.publication-venue {
+  margin: 0.15rem 0;
+  color: #505050;
+  font-style: italic;
 }
 
 summary {
+  width: fit-content;
+  color: #505050;
   cursor: pointer;
-  color: #666;
-  font-size: 0.9em;
-}
-
-summary:hover {
-  color: #333;
+  font-size: 0.9375rem;
 }
 
 pre {
-  background: #f5f5f5;
-  padding: 16px;
-  border-radius: 4px;
+  margin: 0.5rem 0 0;
+  padding: 0.75rem;
   overflow-x: auto;
-  font-size: 0.85em;
-  line-height: 1.5;
+  background: #f5f5f5;
+  font: 0.875rem/1.5 ui-monospace, monospace;
 }
 
-/* Contact Section */
-.contact-text {
-  color: #555;
-  margin-bottom: 8px;
+.affiliations {
+  margin: 0;
+  padding-left: 1.2rem;
 }
 
-/* Other Interests */
-.other-interests {
-  color: #555;
+.affiliations li + li {
+  margin-top: 0.35rem;
 }
 
-.f1 {
-  color: #d32f2f;
-  font-weight: 600;
+.affiliation-date {
+  color: #505050;
 }
 
-/* Footer */
+main > section > p {
+  margin: 0.35rem 0;
+}
+
 .carbon-badge {
-  margin-top: 48px;
-  padding-top: 24px;
-  border-top: 1px solid #eee;
+  margin-top: 2rem;
+  padding-block: 1rem;
+  border-top: 1px solid #b8b8b8;
 }
 
-/* Responsive */
-@media (max-width: 680px) {
-  .header {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
+@media (max-width: 44rem) {
+  .content {
+    width: calc(100% - 2rem);
   }
 
-  .profile-image {
-    width: 240px;
-    height: 205px;
-  }
-
-  .social-links {
-    justify-content: center;
-  }
-
-  h1 {
-    font-size: 1.8em;
+  .hero {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-areas:
+      "intro"
+      "portrait";
+    margin-block: 1.5rem 2rem;
   }
 }
 </style>
@@ -249,61 +173,34 @@ pre {
 <body>
 <div class="content">
 
-<nav>
-  <a href="index.html" class="active">Home</a>
+<nav class="site-nav" aria-label="Main navigation">
+  <a href="index.html" aria-current="page">Home</a>
+  <a href="#publications">Publications</a>
   <a href="blogs.html">Blog</a>
   <a href="travels.html">Travel Photography</a>
 </nav>
 
-<div class="header">
-  <div class="profile-image"></div>
-  <div class="header-info">
+<main>
+<header class="hero">
+  <div class="hero-intro">
     <h1>Kartik Hans</h1>
-    <div class="title">
-      Software Engineer at <a href="https://www.tensormesh.ai" target="_blank" rel="noopener">Tensormesh</a><br>
-      Part-time LLM Systems Researcher
-    </div>
-    <div class="email">hans[at]sci[dot]pitt[dot]edu</div>
+    <p class="bio">I’m a software engineer at <a href="https://www.tensormesh.ai" target="_blank" rel="noopener">Tensormesh</a>, where I work on KV cache optimization for LLM inference. My research spans energy-efficient computing and distributed systems.</p>
+    <p class="email">hans[at]sci[dot]pitt[dot]edu</p>
     <div class="social-links">
-      <a href="https://www.linkedin.com/in/kartikhans/" target="_blank">LinkedIn</a>
-      <a href="https://scholar.google.com/citations?user=-0iSWnQAAAAJ" target="_blank">Google Scholar</a>
-      <a href="https://github.com/kartikhans" target="_blank">GitHub</a>
-      <a href="https://www.instagram.com/kartikhans/" target="_blank">Instagram</a>
+      <a href="https://www.linkedin.com/in/kartikhans/" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://scholar.google.com/citations?user=-0iSWnQAAAAJ" target="_blank" rel="noopener">Google Scholar</a>
+      <a href="https://github.com/kartikhans" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://www.instagram.com/kartikhans/" target="_blank" rel="noopener">Instagram</a>
     </div>
   </div>
-</div>
+  <img class="profile-image" src="img1.png" alt="Portrait of Kartik Hans" width="972" height="864">
+</header>
 
-<h2>Current Position</h2>
-<ul>
-  <li>Aug 2026 - Present: Software Engineer at <a href="https://www.tensormesh.ai" target="_blank" rel="noopener">Tensormesh</a>, working on KV cache optimization for inference.</li>
-</ul>
-
-<h2>Past Affiliations</h2>
-<ul>
-  <li>Jan 2026 - Aug 2026: Software Engineer at Morph Systems.</li>
-  <li>Jan 2024 - Dec 2025: MS in CS at <a href="https://www.sci.pitt.edu/">School of Computing and Information</a>, University of Pittsburgh, Pittsburgh USA.</li>
-  <li>Jan 2024 - Dec 2025: PhD Dropout at <a href="https://www.sci.pitt.edu/">School of Computing and Information</a>, University of Pittsburgh, Pittsburgh USA.</li>
-  <li>Aug 2022 - Dec 2023: Data Integration Engineer at <a href="https://c3.ai/">C3 AI</a>, Bengaluru IN.</li>
-  <li>Nov 2021 - Aug 2022: Data Engineer at <a href="https://www.goldcast.io/">Goldcast</a>, Bengaluru IN.</li>
-  <li>Dec 2020 - Nov 2021: Machine Learning Engineer at <a href="https://www.brightmoney.co/">Bright Money</a>, Bengaluru IN.</li>
-  <li>Dec 2018 - Jan 2019: Research Intern at <a href="https://www.jhu.edu/">Johns Hopkins University</a>, Baltimore USA.</li>
-  <li>Jul 2016 - May 2020: B.Tech at Department of <a href="https://ee.iitd.ac.in/">Electrical Engineering</a>, <a href="https://home.iitd.ac.in/">IIT Delhi</a>.</li>
-</ul>
-
-<h2>Research Interests</h2>
-<div class="interests">
-  <span class="interest-tag">LLM Systems</span>
-  <span class="interest-tag">Data Management</span>
-  <span class="interest-tag">Parallel Computing</span>
-  <span class="interest-tag">Distributed Systems</span>
-  <span class="interest-tag">ML Infrastructure</span>
-</div>
-
-<h2>Publications</h2>
-<p style="color: #666; margin: 0 0 16px 0; font-size: 0.9em;">(in reverse chronological order)</p>
-
+<section aria-labelledby="publications">
+<h2 id="publications">Publications</h2>
 <div class="publication">
   <h3><a href="https://doi.org/10.1109/MDM71479.2026.00036">Exploring Learned Data Reduction for Energy Savings on Battery-Powered Devices</a></h3>
+  <p class="publication-venue">IEEE MDM 2026</p>
   <details>
     <summary>BibTeX Citation</summary>
     <pre>@inproceedings{hans2026datareduction,
@@ -320,6 +217,7 @@ pre {
 
 <div class="publication">
   <h3><a href="https://doi.org/10.1145/3797248.3815400">CarbonSim: A Lifecycle-Aware Framework for Evaluating Carbon Tradeoffs in Hardware Upgrade Decisions</a></h3>
+  <p class="publication-venue">ACM IGSC 2026</p>
   <details>
     <summary>BibTeX Citation</summary>
     <pre>@inproceedings{hans2026carbonsim,
@@ -336,6 +234,7 @@ pre {
 
 <div class="publication">
   <h3><a href="https://www.usenix.org/conference/nsdi20/presentation/yousefi">Liveness Verification of Stateful Network Functions</a></h3>
+  <p class="publication-venue">USENIX NSDI 2020</p>
   <details>
     <summary>BibTeX Citation</summary>
     <pre>@inproceedings{246364,
@@ -353,17 +252,43 @@ pre {
   </details>
 </div>
 
-<h2>Contact</h2>
-<p class="contact-text">Feel free to reach out to me on <a href="https://www.linkedin.com/in/kartikhans/" target="_blank">LinkedIn</a> for project, internship, or job inquiries.</p>
-<p class="contact-text">Want a direct conversation? <a href="https://topmate.io/trippdiv" target="_blank">Schedule time with me on TopMate</a></p>
+</section>
 
-<h2>Other Interests</h2>
-<p class="other-interests">Running, <span class="f1">F1</span>, Ping Pong, Pickleball, Chess, <a href="travels.html">Travel Photography</a></p>
+<section aria-labelledby="affiliations">
+  <h2 id="affiliations">Past Affiliations</h2>
+  <ul class="affiliations">
+    <li><span class="affiliation-date">Jan 2026 – Aug 2026</span> · Software Engineer at Morph Systems.</li>
+    <li><span class="affiliation-date">Jan 2024 – Dec 2025</span> · MS in CS at <a href="https://www.sci.pitt.edu/">School of Computing and Information</a>, University of Pittsburgh, Pittsburgh USA.</li>
+    <li><span class="affiliation-date">Jan 2024 – Dec 2025</span> · PhD Dropout at <a href="https://www.sci.pitt.edu/">School of Computing and Information</a>, University of Pittsburgh, Pittsburgh USA.</li>
+    <li><span class="affiliation-date">Aug 2022 – Dec 2023</span> · Data Integration Engineer at <a href="https://c3.ai/">C3 AI</a>, Bengaluru IN.</li>
+    <li><span class="affiliation-date">Nov 2021 – Aug 2022</span> · Data Engineer at <a href="https://www.goldcast.io/">Goldcast</a>, Bengaluru IN.</li>
+    <li><span class="affiliation-date">Dec 2020 – Nov 2021</span> · Machine Learning Engineer at <a href="https://www.brightmoney.co/">Bright Money</a>, Bengaluru IN.</li>
+    <li><span class="affiliation-date">Dec 2018 – Jan 2019</span> · Research Intern at <a href="https://www.jhu.edu/">Johns Hopkins University</a>, Baltimore USA.</li>
+    <li><span class="affiliation-date">Jul 2016 – May 2020</span> · B.Tech at Department of <a href="https://ee.iitd.ac.in/">Electrical Engineering</a>, <a href="https://home.iitd.ac.in/">IIT Delhi</a>.</li>
+  </ul>
+</section>
 
-<div class="carbon-badge">
+<section aria-labelledby="research">
+  <h2 id="research">Research Interests</h2>
+  <p>LLM systems, data management, parallel computing, distributed systems, and ML infrastructure.</p>
+</section>
+
+<section aria-labelledby="contact">
+  <h2 id="contact">Contact</h2>
+  <p>Reach out on <a href="https://www.linkedin.com/in/kartikhans/" target="_blank" rel="noopener">LinkedIn</a> for project, internship, or job inquiries.</p>
+  <p><a href="https://topmate.io/trippdiv" target="_blank" rel="noopener">Schedule time with me on TopMate</a>.</p>
+</section>
+
+<section aria-labelledby="interests">
+  <h2 id="interests">Other Interests</h2>
+  <p>Running, F1, Ping Pong, Pickleball, Chess, and <a href="travels.html">Travel Photography</a>.</p>
+</section>
+</main>
+
+<footer class="carbon-badge">
   <div id="wcb" class="carbonbadge"></div>
   <script src="https://unpkg.com/website-carbon-badges@1.1.3/b.min.js" defer></script>
-</div>
+</footer>
 
 </div>
 </body>
